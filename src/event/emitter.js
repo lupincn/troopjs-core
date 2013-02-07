@@ -31,7 +31,7 @@ define([ "../component/factory", "when" ], function EventEmitterModule(Factory, 
 		 * @param {...Function} callback for this event
 		 * @returns {Object} instance of this
 		 */
-		on : function on(event, context, callback) {
+		on : function onOn(event, context, callback) {
 			var self = this;
 			var args = arguments;
 			var handlers = self[HANDLERS];
@@ -119,7 +119,7 @@ define([ "../component/factory", "when" ], function EventEmitterModule(Factory, 
 		 * @param {...Function} [callback] to remove
 		 * @returns {Object} instance of this
 		 */
-		off : function off(event, context, callback) {
+		off : function onOff(event, context, callback) {
 			var self = this;
 			var args = arguments;
 			var handlers = self[HANDLERS];
@@ -198,7 +198,7 @@ define([ "../component/factory", "when" ], function EventEmitterModule(Factory, 
 		 * @param {...Function} callback to reemit
 		 * @returns {Object} instance of this
 		 */
-		reemit : function reemit(event, context, callback) {
+		reemit : function onReemit(event, context, callback) {
 			var self = this;
 			var args = arguments;
 			var handlers = self[HANDLERS];
@@ -261,7 +261,7 @@ define([ "../component/factory", "when" ], function EventEmitterModule(Factory, 
 		 * @param {String} event to emit
 		 * @returns {Promise} promise that resolves with results from all listeners
 		 */
-		emit : function emit(event) {
+		emit : function onEmit(event) {
 			var self = this;
 			var args = arguments;
 			var handlers = self[HANDLERS];

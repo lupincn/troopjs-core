@@ -107,14 +107,14 @@ define([ "./base", "when", "../pubsub/hub" ], function GadgetModule(Component, w
 		/**
 		 * Calls hub.publish in self context
 		 */
-		"publish" : function publish() {
+		"publish" : function onPublish() {
 			return PUBLISH.apply(hub, arguments);
 		},
 
 		/**
 		 * Calls hub.subscribe in self context
 		 */
-		"subscribe" : function subscribe() {
+		"subscribe" : function onSubscribe() {
 			var self = this;
 			var args = [ self ];
 
@@ -130,7 +130,7 @@ define([ "./base", "when", "../pubsub/hub" ], function GadgetModule(Component, w
 		/**
 		 * Calls hub.unsubscribe in self context
 		 */
-		"unsubscribe" : function unsubscribe() {
+		"unsubscribe" : function onUnsubscribe() {
 			var self = this;
 			var args = [ self ];
 

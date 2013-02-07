@@ -65,7 +65,7 @@ define([ "../event/emitter", "when" ], function ComponentModule(Emitter, when) {
 		 * Start the component
 		 * @return {*}
 		 */
-		"start" : function start() {
+		"start" : function onStart() {
 			var self = this;
 			var _signal = self.signal;
 			var args = [ "initialize" ];
@@ -85,7 +85,7 @@ define([ "../event/emitter", "when" ], function ComponentModule(Emitter, when) {
 		 * Stops the component
 		 * @return {*}
 		 */
-		"stop" : function stop() {
+		"stop" : function onStop() {
 			var self = this;
 			var _signal = self.signal;
 			var args = [ "stop" ];
